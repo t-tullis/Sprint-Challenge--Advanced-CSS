@@ -161,8 +161,11 @@ p {
   margin: 0 auto;
 }
 .header-content {
+  position: fixed;
+  width: 100%;
   background: #F6F6F6;
   border: 1px solid #F1F1F1;
+  opacity: 0.75;
 }
 .header-content h1 {
   padding-top: 1%;
@@ -186,6 +189,9 @@ p {
   text-decoration: none;
   color: #454A59;
 }
+.header-content nav a:hover {
+  animation: colorChange 1s infinite;
+}
 .header-content header {
   max-width: 800px;
   margin: 0 auto;
@@ -193,6 +199,14 @@ p {
 @media (max-width: 500px) {
   .header-content header {
     width: 100%;
+  }
+}
+@keyframes colorChange {
+  50% {
+    color: white;
+  }
+  75% {
+    color: #454A59;
   }
 }
 footer {
@@ -207,6 +221,7 @@ footer {
 }
 .home .intro .header-img {
   border-radius: 5px;
+  padding-top: 11.5%;
 }
 @media (max-width: 500px) {
   .home .intro .header-img {

@@ -1,8 +1,11 @@
 // Navigation code here
 
 .header-content{
+    position: fixed;
+    width: 100%;
     background: @nav-bg;
     border:1px solid @nav-border;
+    opacity: .75;
     h1{
         padding-top: 1%;
         text-align: center;
@@ -23,6 +26,11 @@
         a{
             text-decoration: none;
             color: @nav-font;
+
+            &:hover{
+                animation: colorChange 1s infinite;
+
+            }
         }
     }
     header{
@@ -32,5 +40,14 @@
         @media @phone{
             width: 100%;
         }
+    }
+}
+
+@keyframes colorChange{
+    50%{
+        color: white;
+    }
+    75%{
+        color: @nav-font;
     }
 }
