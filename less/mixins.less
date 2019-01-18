@@ -1,1 +1,25 @@
 // Mixins Here
+.btn-fontSize-paddingTop(@fontSize, @paddingTop){
+    font-size: @fontSize;
+    padding-top: @paddingTop;
+}
+
+.custom-img(@width, @borderRadius, @height){
+    width: @width;
+    border-radius: @borderRadius;
+    height:@height;
+}
+
+.custom-btn(@width, @height, @bgcolor, @txtcolor){
+    width: @width;
+    height: @height;
+    background: @bgcolor;
+    color: @txtcolor;
+    border-radius: 5px;
+
+    &:hover{
+        background: @txtcolor;
+        color: @bgcolor;
+        cursor: pointer;
+    }
+}
